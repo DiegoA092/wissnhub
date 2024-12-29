@@ -5,23 +5,15 @@ This API REST has been developed using Java 17 and Spring Boot applying the know
 
 ## API Description
 
-The API allows the user to login and use the JWTtoken generated to create, retrieve, update and delete topics from a database
+The API allows the user to login and use the JWTtoken generated to authorize the CRUD (create, retrieve, update, delete) operations
 
-### 1. Buscar libro por titulo
-- Al introducir el titulo del libro, se realizara la busqueda y se imprimira el titulo completo del libro, autor, idioma y numero de descargas.
-### 2. Listar libros registrados
-- Se mostrara la lista de libros registrados en la base de datos en orden alfabetico, imprimiendo el titulo completo del libro, autor, idioma y numero de descargas.
-### 3. Listar autores registrados
-- Se mostrara la lista de autores registrados en la base de datos en orden alfabetico, imprimiendo el nombre completo del autor, fecha de nacimiento, fecha de defuncion y libros disponibles en la BD.
-### 4. Listar autores vivos desde determinado año
-- Al introducir una fecha de inicio, se mostrara la lista de autores registrados en la base de datos vivos a partir del año dado, imprimiendo el nombre completo del autor, fecha de nacimiento y fecha de defuncion.
-### 5. Listar libros por idioma
-- Al introducir uno de los idiomas disponibles (EN - ingles, ES - español, FR - frances, PR - portugues), se mostrara la lista de libros registrados en la base de datos en el idioma dado, imprimiendo el titulo completo del libro, nombre del autor, fecha de nacimiento y fecha de defuncion.
-### 6. Top 10 libros mas descargados
-- Se mostrara una lista con los 10 libros mas descargados en la base de datos, imprimiendo el numero de descargas, nombre del libro, autor e idioma.
-### 7. Listar libros registrados por autor
-- Se mostrara una lista con los autores disponibles en la base de datos y se solicitara introducir el nombre del autor deseado, posterior a esto se imprimira una lista con los libros disponibles del autor con el nombre completo del libro, idioma y numero de descargas.
-### 8. Estadisticas
-- Se mostrara el promedio de descargas, la mayor cantidad y la menor cantidad de descargas por libro.
-### 0. Salir
-- El usuario saldrá de la aplicación y aparecerá un mensaje de despedida.
+### 1. Login
+- Registered users will provide their username and password in order to obtain a JWTtoken 
+### 2. Create topic
+- Topics can be created by providing their user id and the topic title, message and course id
+### 3. Retrieve 
+- A complete list of the registered topics can be retrieved without additional info, for spécific topics it is required to provide their id in the URL
+### 4. Update topic
+- Topics can be updated by providing their id in the URL and the changes required either in the title, message, status or course id
+### 5. Delete topic
+-Topics can be deleted by providing their id in the URL 
